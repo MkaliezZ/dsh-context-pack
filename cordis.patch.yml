@@ -1,0 +1,7 @@
+- id: dsh-context-pack
+  name: '@mkaliezz/dsh-context-pack'
+  config:
+    maxFiles: 60
+    maxTotalBytes: 120000
+    maxFileBytes: 30000
+    maxInjectedBytes: 120000
