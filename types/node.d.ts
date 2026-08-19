@@ -7,6 +7,7 @@ declare module 'node:path' {
 }
 declare module 'node:crypto' {
   export function createHash(name: string): { update(value: string | Uint8Array): any; digest(encoding: 'hex'): string }
+  export function randomUUID(): string
 }
 declare module 'node:test' { const test: any; export default test }
 declare module 'node:assert/strict' { const assert: any; export default assert }

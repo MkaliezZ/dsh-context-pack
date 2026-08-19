@@ -1,4 +1,5 @@
 import type { Context } from '@deepseek-ai/cordis'
+import { randomUUID } from 'node:crypto'
 import { buildContextPack, type ContextPackOptions } from './core.js'
 
 export const name = 'dsh-context-pack'
@@ -36,6 +37,8 @@ export function apply(ctx: Context, config: Config = {}): void {
         }
 
         invocation.agent.inject({
+          id: randomUUID(),
+          role: 'user',
           content: [{ type: 'text', text: pack.markdown }],
           source: { kind: 'plugin', plugin: name },
         })
