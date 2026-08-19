@@ -1,6 +1,6 @@
 {
   "name": "@mkaliezz/dsh-context-pack",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Deterministic privacy-aware repository context packs for DeepSeek Harness",
   "type": "module",
   "license": "MIT",
@@ -15,7 +15,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && node --test lib/tests/*.test.js",
-    "check": "npm run build && npm test"
+    "check": "npm run build && npm test",
+    "prepublishOnly": "npm run build"
   },
   "dsh": {
     "bundle": {
@@ -26,5 +27,12 @@
     "@deepseek-ai/cordis": "workspace:^",
     "@deepseek-ai/dsh-commands": "workspace:^",
     "@deepseek-ai/dsh-agent": "workspace:^"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MkaliezZ/dsh-context-pack.git"
   }
 }
